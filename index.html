@@ -1,0 +1,132 @@
+<! author: Tsoi Yuen Lau
+   source: w3schools
+>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Lab 1: Questionnaire</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+  </head>
+
+  <body>
+    <img src="asset/image/Tesla Logo.png" alt="Tesla's Logo" width="150" height = "100" class="img">
+    <h1>Tesla Landing Page UI Survey</h1>
+    <p id="introtext"> The purpose of this survey is to study Tesla's landing page, you opinion matters and thank you for your participation!
+    <br><br>
+    <a id="introtext" href="https://www.tesla.com/"> Click here to visit Tesla's Landing Page</a>
+    </p>
+
+    <form id="surveyform" action="index.php">
+
+      <div class="textquestion">
+        <h2>Welcome, and please fill in your personal information</h2>
+        <label for="firstname">First Name:</label><br>
+        <input type="text" id="firstname" name="firstname"><br>
+        <br>
+        <label for="lastname">Last Name:</label><br>
+        <input type="text" id="lastname" name="lastname"><br>
+        <br><br>
+        <hr>
+      </div>
+
+      <div class="checkboxquestion">
+        <h2> What type of car do you currently own </h2>
+        <label class="container">Sedan
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Sports Car
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Coupe
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Convertible
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">SUV
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Truck
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Other
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <br><br>
+        <hr>
+      </div>
+
+      <div class="checkboxquestion">
+        <h2> How would you rate Tesla's landing page </h2><br>
+        <label class="roundcontainer">Very Good
+        <input type="radio" name="radio">
+          <span class="roundcheckmark"></span>
+        </label>
+        <label class="roundcontainer">Good
+          <input type="radio" name="radio">
+          <span class="roundcheckmark"></span>
+        </label>
+        <label class="roundcontainer">Average
+          <input type="radio" name="radio">
+          <span class="roundcheckmark"></span>
+        </label>
+        <label class="roundcontainer">Bad
+          <input type="radio" name="radio">
+          <span class="roundcheckmark"></span>
+        </label>
+        <label class="roundcontainer">Very Bad
+          <input type="radio" name="radio">
+          <span class="roundcheckmark"></span>
+        </label>
+        <br><br>
+        <hr>
+      </div>
+
+      <div class="dropdownquestion">  
+        <h2>Do you think you learn enough information from Tesla's landing page in order to consider buying a Tesla Car</h2><br>
+        <select id="favorite">
+          <option value="Not Sure">Not Sure</option>
+          <option value="Yes" selected="selected">Yes</option>
+          <option value="No">No</option>
+        </select>
+        <br><br><br>
+        <hr>
+      </div>
+
+
+      <div class="paragraphtextquestion">  
+        <h2>What is your first impression of Tesla's landing page</h2><br>
+        <textarea placeholder="Enter your comment here!" rows="5" cols="97"></textarea>
+        <br><br>
+        <hr>
+      </div>
+			
+	    
+			<div class="submitbutton">
+        <br>
+        <button id="submitButton" type="button" class="block">
+        SUBMIT your questionnaire
+        </button>
+        <br><br>
+      </div>
+
+
+      <div class="signature">  
+	    <p>Site created by Jack Lau</p>	
+      </div>
+
+    </form>
+  </body>
+</html>
