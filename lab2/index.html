@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <title>Lab 2: Online Groceries</title>
+</head>
+
+<body>
+  <header>
+     <h1 id="title" class="centered">Welcome to Jack Online Groceries Store</h1>
+  </header>
+
+  <a><img src="img/Banner Pic.PNG" alt="Online Groceries Banner Picture" width="800" height = "400" class="banner"></a>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Client')" id="client-default">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+</div>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent" >
+  <h3 class="centered">Keep Safe!</h3>
+  <p>Please tell us about your dietary restrictions:</p>
+
+  <label class="container">
+    <input id = "lactose" value="lactose" onchange="populateListProductChoices()" type="checkbox">Lactose Intolerance
+    <span class="checkmark"></span>
+  </label>
+  <label class="container">
+    <input id = "nut"  value="nut" onchange="populateListProductChoices()" type="checkbox">Nut Allergies
+    <span class="checkmark"></span>
+  </label>
+  <label class="container">
+    <input id = "organic" value="organic" onchange="populateListProductChoices()" type="checkbox">Organic Only
+    <span class="checkmark"></span>
+  </label>
+  <label class="container">
+    <input id = "none" value="none"  onchange="populateListProductChoices()" type="checkbox">None
+    <span class="checkmark"></span>
+  </label>
+
+  <div class="nextbutton">
+    <br>
+    <button id="nextbutton" onclick="openInfo(event, 'Products')" type="button" class="block">
+    Next
+    </button>
+    <br><br>
+  </div>
+
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3 class="centered">Your targeted products</h3>
+  <p>We preselected products based on your restrictions.</p>
+	 Choose items to buy:
+   <br><br>
+	 <div id="displayProduct"></div>
+	 <button id="addCart" type="button" onclick="selectedItems()">
+		Add selected items to cart.
+	</button>
+
+  <div class="nextbutton">
+    <br>
+    <button id="nextbutton" onclick="openInfo(event, 'Cart')" type="button" class="block">
+    Buy Now
+    </button>
+    <br><br>
+  </div>
+
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3 class="centered">Cart</h3>
+  <p>Here is your cart.</p>
+  <div id="displayCart"></div>
+</div>
+
+<div class="signature">  
+	    <p class="centered">Site created by Jack Lau</p>	
+      </div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+</html>
