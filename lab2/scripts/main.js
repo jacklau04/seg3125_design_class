@@ -105,3 +105,4 @@ function selectedItems(){
 }
 
 document.getElementById("client-default").click();
+document.getElementById("none").click();
