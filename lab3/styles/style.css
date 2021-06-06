@@ -1,0 +1,128 @@
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    padding: 14px 16px;
+    margin-left:auto;
+    margin-right:auto;
+    width: 50%;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-family: 'Roboto';
+    font-size: 16px;
+  }
+  
+  /* Change background color of buttons on hover */
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    text-decoration: underline;
+  }
+  
+  .p{
+    font-family: 'Roboto';
+    font-size: 14px;
+  }
+  
+  .banner{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    margin-left:auto;
+    margin-right:auto;
+    font-size: 14px;
+    font-family: 'Roboto';
+    width: 50%;
+  }
+  
+  .checkboxquestion{
+    font-family: 'Roboto';
+    font-size: 16px;
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+  .container {
+    display: block;
+    position: relative;
+    top: 15px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  
+  .signature {
+    color: grey;
+    font-style: italic;
+    font-size: 12px;
+    font-family: 'Roboto';
+    margin-left:auto;
+    margin-right:auto;
+  }
+  
+  .centered {
+      text-align: center;
+  }
+  
+  #title{
+    font-family: 'Roboto';
+    font-size: 35px;
+  }
+  
+  #displayProduct{
+    font-family: 'Roboto';
+  }
+  
+  .block {
+    display: block;
+    width: 30%;
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 14px 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  
+  .block2 {
+    display: block;
+    width: 30%;
+    border: none;
+    background-color: blue;
+    color: white;
+    padding: 14px 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+  }
