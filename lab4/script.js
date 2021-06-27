@@ -22,6 +22,27 @@ function validatePhone(txtPhone) {
     }
 }
 
+      // Form validation code will come here.
+      function validate() {
+
+        datetimepicker = document.getElementById('datetimepicker').value 
+        fName = document.getElementById('form6Example1').value 
+        lName = document.getElementById('form6Example2').value 
+        var service = document.getElementById('serviceid').value
+      
+         if( document.myForm.fName.value == "" ) {
+            alert( "Please provide your name!" );
+            document.myForm.fName.focus() ;
+            return false;
+         }
+         else{
+           alert("Thanks for booking!\n"+
+           "Your booking time: " + datetimepicker+
+           "\nYour name: " + fName +" "+lName +
+           "\nYour Service: "+service);
+         }
+      }
+
 
 // Using date restrictions on datepicker
 // Document of datepicker is here: https://api.jqueryui.com/datepicker/

@@ -207,12 +207,12 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     <br>
     <h3 id="scheduleSomething">Schedule an Appointment</h3>
     <br>
-    <form>
+    <form name = "myForm" onsubmit = "return(validate());">
   <!-- 2 column grid layout with text inputs for the first and last names -->
   <div class="row mb-4">
     <div class="col">
       <div class="form-outline">
-        <input type="text" id="form6Example1" class="form-control" required/>
+        <input type="text" name="fName" id="form6Example1" class="form-control" required/>
         <span class="validity"></span>
         <label class="form-label" for="form6Example1">First Name</label>
       </div>
@@ -226,11 +226,11 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     </div>
   </div>
 
-  <select class="form-select" aria-label="Default select example">
+  <select class="form-select" id="serviceid" aria-label="Default select example">
   <option selected>Preventive Care</option>
   <option value="1">Chiropractor</option>
   <option value="2">Massage</option>
-  <option value="3">Surgery</option>
+  <option value="3">Surgery</ocption>
   <option value="4">Rehabillitation</option>
   </select>
   <p>Service</p>
@@ -276,7 +276,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
   </div>
   <!-- Number input -->
   <div class="form-outline mb-4">
-    <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required id="form6Example6" class="form-control" />
+    <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required id="form6Example6" oninvalid="this.setCustomValidity('Please Follow the following Format 123-456-7899')" class="form-control" />
     <span class="validity"></span>
     <label class="form-label" for="form6Example6" >Phone</label>
     <small>&ensp;Format: 123-456-7899</small>
@@ -284,7 +284,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
 
   <!-- Credit Card input -->
   <div class="form-outline mb-4">
-    <input type="tel" data-toggle="tooltip" title="We ask for your credit card number in case of no-show, 20$ will be charged." pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" required id="form6Example6" class="form-control" />
+    <input type="tel" data-toggle="tooltip" title="We ask for your credit card number in case of no-show, 20$ will be charged." pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" oninvalid="this.setCustomValidity('Please Follow the following Format 1234-1234-1234-1234')" required id="form6Example6" class="form-control" />
     <span class="validity"></span>
     <label data-toggle="tooltip" title="We ask for your credit card number in case of no-show, 20$ will be charged." class="form-label" for="form6Example6" >Credit Card</label>
     <small>&ensp;Format: 1234-1234-1234-1234</small>
@@ -305,15 +305,35 @@ Many websites will use what is called CSS grid layouts, where you will have a he
       value=""
       id="form6Example8"
     />
-    <label class="form-check-label" for="form6Example8"> Agree to terms and conditions</label>
+    <label class="form-check-label" for="form6Example8 required"> Agree to terms and conditions</label>
   </div>
   
   <div class="text-center">
   <!-- Submit button -->
-    <button type="submit" class="btn btn-primary btn-block " onClick="refreshPage()">Place order</button>
+    <button type="submit" class="btn btn-primary btn-block ">Place order</button>
   </div>
 </form>
 
+</div>
+
+<div id="popup" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 
