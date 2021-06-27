@@ -8,14 +8,32 @@ This will help you get started with your code!
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link href="styles/styles.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
-    <title>Module 4 Lab</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+
+     <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+
+      <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+    <title>Module 6 Lab</title>
 </head>
 <body>
+  <script src="script.js"></script>
+    <script type="text/javascript" src="plugins/js/all.min.js"></script>
+    <script type="text/javascript" src="plugins/js/calendar.min.js"></script>
 <!--
 I store all of the page information in a container,
 Many websites will use what is called CSS grid layouts, where you will have a header, body, footer and both sides used for ads or other information
@@ -30,33 +48,31 @@ Many websites will use what is called CSS grid layouts, where you will have a he
 
     <header>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <div class="container-fluid">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-mdb-toggle="collapse"
-        data-mdb-target="#navbarExample01"
-        aria-controls="navbarExample01"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarExample01">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <h1>Jack Lau Physiotherapy Clinic  &nbsp&nbsp </h1>
-          <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-        </ul>
-      </div>
+
+  <nav class="navbar navbar-expand-lg" style="z-index: 2000;">
+      <div class="container-fluid">
+        <!-- Navbar brand -->
+        
+        <a class="navbar-brand"  href="https://jacklau04.github.io/jacklau0497.github.io/">
+        <img class="landing_page_logo navbar-brand" target="_blank" src="images/company_logo.png" alt="Logo"></img>
+        <strong>Jack Lau Physiotherapy Clinic  &nbsp&nbsp</strong>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="#our Services">Our Services</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="#our Physicians">Our Physicians</a>
+            </li>
+          </ul>
+
+        </div>
     </div>
   </nav>
   <!-- Navbar -->
@@ -65,8 +81,13 @@ Many websites will use what is called CSS grid layouts, where you will have a he
 
   <!-- Jumbotron -->
   <div class="p-5 text-center bg-light">
-    <h1 class="mb-2">Welcome to Jack Lau Physiotherapy Clinic</h1>
+    <h1 id="landing" class="mb-2">Welcome to Jack Lau Physiotherapy Clinic</h1>
     <h4 class="mb-3">We are dedicated to providing the best care to our customers</h4>
+    <br><br>
+    <img class="clinic_logo" src="images/pngegg.png">
+        <br><br>
+    <h6 class="mb-3">Our Address:</h6>
+    <p class="mb-3">Hello Street, Ottawa Canada, K3E, 6L9</p>
     <a class="btn btn-primary" href="#scheduleSomething" role="button">Book Now</a>
   </div>
   <br>
@@ -85,7 +106,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     <table class="table table-info table-hover">
         <thead>
             <tr>
-                <th scope="col"><h2>Service</h2></th>
+                <th scope="col" id="our Services"><h2>Service</h2></th>
                 <th scope="col"><h2>Description</h2></th>
             </tr>
         </thead>
@@ -150,7 +171,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     https://getbootstrap.com/docs/5.0/components/card/
     -->
     <br>
-    <h3>Meet our Physicians!</h3>
+    <h3 id="our Physicians">Meet our Physicians!</h3>
     <br>
     <div class="row justify-content-around">
         <div class="card" style="width: 18rem;">
@@ -191,13 +212,15 @@ Many websites will use what is called CSS grid layouts, where you will have a he
   <div class="row mb-4">
     <div class="col">
       <div class="form-outline">
-        <input type="text" id="form6Example1" class="form-control" />
+        <input type="text" id="form6Example1" class="form-control" required/>
+        <span class="validity"></span>
         <label class="form-label" for="form6Example1">First Name</label>
       </div>
     </div>
     <div class="col">
       <div class="form-outline">
-        <input type="text" id="form6Example2" class="form-control" />
+        <input type="text" id="form6Example2" class="form-control" required/>
+        <span class="validity"></span>
         <label class="form-label" for="form6Example2">Last Name</label>
       </div>
     </div>
@@ -209,91 +232,63 @@ Many websites will use what is called CSS grid layouts, where you will have a he
   <option value="2">Massage</option>
   <option value="3">Surgery</option>
   <option value="4">Rehabillitation</option>
-</select>
-<p>Service</p>
-<br>
-
- <div class="row mb-4">
-  <div class="col">
-    <div class="form-outline"><select class="form-select" aria-label="Default select example">
-   <option selected>2021</option>
-   <option value="2">2022</option>
-    </select>
-    <p>Year</p>
-    </div>
-  </div>
-  <div class="col">
-    <div class="form-outline"><select class="form-select" aria-label="Default select example">
-   <option selected>1</option>
-   <option value="1">2</option>
-   <option value="2">3</option>
-   <option value="3">4</option>
-   <option value="4">5</option>
-   <option value="5">6</option>
-   <option value="6">7</option>
-   <option value="7">8</option>
-   <option value="8">9</option>
-   <option value="9">10</option>
-   <option value="10">11</option>
-   <option value="11">12</option>
-
-    </select>
-    <p>Month</p>
-
-    </div>
-  </div>
-  <div class="col">
-<div class="form-outline">
-        <input type="text" id="form6Example1" class="form-control" />
-        <label class="form-label" for="form6Example1">Day</label>
-      </div>
-  </div>
-  </div>
-
-  <select class="form-select" aria-label="Default select example">
-  <option selected>8:00</option>
-  <option value="1">9:00</option>
-  <option value="2">10:00</option>
-  <option value="3">11:00</option>
-  <option value="4">12:00</option>
-  <option value="5">13:00</option>
-  <option value="6">14:00</option>
-  <option value="7">15:00</option>
-  <option value="8">16:00</option>
-  <option value="9">17:00</option>
-  
   </select>
-  <p>Time of the Appointment</p>
+  <p>Service</p>
   <br>
+
+  
+  <div class="form-outline mb-4">
+    <input type="datetime-local" min="2021-06-28T08:30" max="2021-07-15T16:30" class="form-control datepicker" name="datetimepicker" id="datetimepicker" required><span class="validity"></span>
+    <label class="form-label" for="birthdaytime">Date and time</label>   
+    
+  </div>
 
   <!-- Text input -->
   <div class="form-outline mb-4">
-    <input type="text" id="form6Example3" class="form-control" />
+    <input type="text" id="form6Example3" class="form-control" required />
+    <span class="validity"></span>
     <label class="form-label" for="form6Example3">City</label>
   </div>
 
   <!-- Text input -->
   <div class="form-outline mb-4">
-    <input type="text" id="form6Example4" class="form-control" />
+    <input type="text" id="form6Example4" class="form-control" required />
+    <span class="validity"></span>
     <label class="form-label" for="form6Example4">Province</label>
   </div>
 
   <!-- Text input -->
   <div class="form-outline mb-4">
-    <input type="text" id="form6Example4" class="form-control" />
+    <input type="text" id="form6Example4" class="form-control" required />
+    <span class="validity"></span>
     <label class="form-label" for="form6Example4">Postal Code</label>
   </div>
 
   <!-- Email input -->
   <div class="form-outline mb-4">
-    <input type="email" id="form6Example5" class="form-control" />
+    <input type="email" id="form6Example5" class="form-control" required />
+    <span class="validity"></span>
     <label class="form-label" for="form6Example5">Email</label>
   </div>
 
+  <div class="form-outline mb-4">
+    <p>Date: <input type="text" id="dateInput"></p>
+  </div>
   <!-- Number input -->
   <div class="form-outline mb-4">
-    <input type="number" id="form6Example6" class="form-control" />
-    <label class="form-label" for="form6Example6">Phone</label>
+    <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required id="form6Example6" class="form-control" />
+    <span class="validity"></span>
+    <label class="form-label" for="form6Example6" >Phone</label>
+    <small>&ensp;Format: 123-456-7899</small>
+  </div>
+
+  <!-- Credit Card input -->
+  <div class="form-outline mb-4">
+    <input type="tel" data-toggle="tooltip" title="We ask for your credit card number in case of no-show, 20$ will be charged." pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" required id="form6Example6" class="form-control" />
+    <span class="validity"></span>
+    <label data-toggle="tooltip" title="We ask for your credit card number in case of no-show, 20$ will be charged." class="form-label" for="form6Example6" >Credit Card</label>
+    <small>&ensp;Format: 1234-1234-1234-1234</small>
+
   </div>
 
   <!-- Message input -->
@@ -322,49 +317,35 @@ Many websites will use what is called CSS grid layouts, where you will have a he
 </div>
 
 
+
+
 <!-- here we input our javascript helper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+    ></script>
+   
 </body>
 
 
 <!-- Footer -->
 <footer class="page-footer font-small unique-color-dark">
 
-  <div style="background-color: #6351ce;">
-    <div class="container">
-
-        <!-- Grid column -->
-        <div class="col-md-6 col-lg-7 text-center text-md-right">
-
-          <!-- Facebook -->
-          <a class="fb-ic">
-            <i class="fab fa-facebook-f white-text mr-4"> </i>
-          </a>
-          <!-- Twitter -->
-          <a class="tw-ic">
-            <i class="fab fa-twitter white-text mr-4"> </i>
-          </a>
-          <!-- Google +-->
-          <a class="gplus-ic">
-            <i class="fab fa-google-plus-g white-text mr-4"> </i>
-          </a>
-          <!--Linkedin -->
-          <a class="li-ic">
-            <i class="fab fa-linkedin-in white-text mr-4"> </i>
-          </a>
-          <!--Instagram-->
-          <a class="ins-ic">
-            <i class="fab fa-instagram white-text"> </i>
-          </a>
-
-        </div>
-        <!-- Grid column -->
-
-      </div>
-      <!-- Grid row-->
-
-    </div>
-  </div>
 
   <!-- Footer Links -->
   <div class="container text-center text-md-left mt-5">
@@ -384,47 +365,19 @@ Many websites will use what is called CSS grid layouts, where you will have a he
       <!-- Grid column -->
 
       <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-
-        <!-- Links -->
-        <h6 class="text-uppercase font-weight-bold">Service</h6>
-        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p>
-          <a href="#!">Preventive Care</a>
-        </p>
-        <p>
-          <a href="#!">Chiropractor</a>
-        </p>
-        <p>
-          <a href="#!">Massage</a>
-        </p>
-        <p>
-          <a href="#!">Surgery</a>
-        </p>
-        <p>
-          <a href="#!">Rehabillitation</a>
-        </p>
-
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
       <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 
         <!-- Links -->
         <h6 class="text-uppercase font-weight-bold">Useful links</h6>
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
         <p>
-          <a href="#!">About Us</a>
+          <a href="#landing">About Us</a>
         </p>
         <p>
-          <a href="#!">Contact Us</a>
+          <a href="#our Services">Our Services</a>
         </p>
         <p>
-          <a href="#!">Pricing</a>
-        </p>
-        <p>
-          <a href="#!">Help</a>
+          <a href="#our Physicians">Our Physicians</a>
         </p>
 
       </div>
