@@ -29,12 +29,22 @@ function validatePhone(txtPhone) {
         fName = document.getElementById('form6Example1').value 
         lName = document.getElementById('form6Example2').value 
         var service = document.getElementById('serviceid').value
+        const phone = document.getElementById("form6Example6").value;
+        const creditcard = document.getElementById("form6Example7").value;
+        var phoneRGEX = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+        var cardregexp = /^[(]{0,1}[0-9]{4}[)]{0,1}[-\s\.]{0,1}[0-9]{4}[-\s\.]{0,1}[0-9]{4}[-\s\.]{0,1}[0-9]{4}$/;
+        
+        var phoneResult = phoneRGEX.test(phone);
+        var cardResult = cardregexp.test(creditcard)
       
-         if( document.myForm.fName.value == "" ) {
-            alert( "Please provide your name!" );
-            document.myForm.fName.focus() ;
+         if(phoneResult == false) {
+            alert( "Please enter your phone number with the proper format! e.g. 123-456-7899 or 1234567899");
             return false;
-         }
+        }
+        else if (cardResult == false) {
+          alert( "Please enter your credit card number with the proper format! e.g. 1234-1234-1234-1234");
+          return false;
+        }
          else{
            alert("Thanks for booking!\n"+
            "Your booking time: " + datetimepicker+

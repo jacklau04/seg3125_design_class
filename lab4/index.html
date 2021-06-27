@@ -83,6 +83,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
   <div class="p-5 text-center bg-light">
     <h1 id="landing" class="mb-2">Welcome to Jack Lau Physiotherapy Clinic</h1>
     <h4 class="mb-3">We are dedicated to providing the best care to our customers</h4>
+    <h4 class="mb-3">We are the only 24/7 clinic, but we only allow advance booking up to 2 weeks</h4>
     <br><br>
     <img class="clinic_logo" src="images/pngegg.png">
         <br><br>
@@ -112,24 +113,24 @@ Many websites will use what is called CSS grid layouts, where you will have a he
         </thead>
         <tbody>
             <tr>
-                <td>Preventive Care</td>
-                <td>Preventive care helps detect or prevent serious diseases and medical problems before they can become major. <br>Examples including  annual check-ups, immunizations, and flu shots, as well as certain tests and screenings.</td>
+                <td><img class="small-icon" src="images/healthcare.png">Preventive Care</td>
+                <td style="font-size: 16px;">Preventive care helps detect or prevent serious diseases and medical problems before they can become major. <br>Examples including  annual check-ups, immunizations, and flu shots, as well as certain tests and screenings.</td>
             </tr>
             <tr>
-                <td>Chiropractor</td>
-                <td>Chiropractors focus on the intimate relationship between the nervous system and spine.</td>
+                <td><img class="small-icon" src="images/health-insurance.png">Chiropractor</td>
+                <td style="font-size: 16px;">Chiropractors focus on the intimate relationship between the nervous system and spine.</td>
             </tr>
             <tr>
-                <td>Massage</td>
-                <td>We performs therapeutic massages on clients to improve circulation, promote relaxation, and relieve stress, pain, and injuries.</td>
+                <td><img class="small-icon" src="images/massage.png">Massage</td>
+                <td style="font-size: 16px;">We performs therapeutic massages on clients to improve circulation, promote relaxation, and relieve stress, pain, and injuries.</td>
             </tr>
             <tr>
-                <td>Surgery</td>
-                <td>Surgical procedure for any physical injury.</td>
+                <td><img class="small-icon" src="images/surgery.png">Surgery</td>
+                <td style="font-size: 16px;">Surgical procedure for any physical injury.</td>
             </tr>
             <tr>
-                <td>Rehabillitation</td>
-                <td>Treatments designed to facilitate the process of recovery from injury, illness, or disease to as normal a condition as possible.</td>
+                <td><img class="small-icon" src="images/rehabilitation.png">Rehabillitation</td>
+                <td style="font-size: 16px;">Treatments designed to facilitate the process of recovery from injury, illness, or disease to as normal a condition as possible.</td>
             </tr>
         </tbody>
     </table>
@@ -238,7 +239,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
 
   
   <div class="form-outline mb-4">
-    <input type="datetime-local" min="2021-06-28T08:30" max="2021-07-15T16:30" class="form-control datepicker" name="datetimepicker" id="datetimepicker" required><span class="validity"></span>
+    <input type="datetime-local" min="2021-06-28T08:30" max="2021-07-10T12:00" class="form-control datepicker" name="datetimepicker" id="datetimepicker" required><span class="validity"></span>
     <label class="form-label" for="birthdaytime">Date and time</label>   
     
   </div>
@@ -271,21 +272,16 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     <label class="form-label" for="form6Example5">Email</label>
   </div>
 
-  <div class="form-outline mb-4">
-    <p>Date: <input type="text" id="dateInput"></p>
-  </div>
   <!-- Number input -->
   <div class="form-outline mb-4">
-    <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required id="form6Example6" oninvalid="this.setCustomValidity('Please Follow the following Format 123-456-7899')" class="form-control" />
-    <span class="validity"></span>
+    <input type="text" required  id="form6Example6"  class="form-control" />
     <label class="form-label" for="form6Example6" >Phone</label>
     <small>&ensp;Format: 123-456-7899</small>
   </div>
 
   <!-- Credit Card input -->
   <div class="form-outline mb-4">
-    <input type="tel" data-toggle="tooltip" title="We ask for your credit card number in case of no-show, 20$ will be charged." pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" oninvalid="this.setCustomValidity('Please Follow the following Format 1234-1234-1234-1234')" required id="form6Example6" class="form-control" />
-    <span class="validity"></span>
+    <input type="text" data-toggle="tooltip" title="We ask for your credit card number in case of no-show, 20$ will be charged." required id="form6Example7" class="form-control" />
     <label data-toggle="tooltip" title="We ask for your credit card number in case of no-show, 20$ will be charged." class="form-label" for="form6Example6" >Credit Card</label>
     <small>&ensp;Format: 1234-1234-1234-1234</small>
 
@@ -297,16 +293,6 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     <label class="form-label" for="form6Example7">Additional information</label>
   </div>
 
-  <!-- Checkbox -->
-  <div class="form-check d-flex justify-content-center mb-4">
-    <input
-      class="form-check-input me-2"
-      type="checkbox"
-      value=""
-      id="form6Example8"
-    />
-    <label class="form-check-label" for="form6Example8 required"> Agree to terms and conditions</label>
-  </div>
   
   <div class="text-center">
   <!-- Submit button -->
@@ -380,6 +366,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
         <h6 class="text-uppercase font-weight-bold"> Jack Lau Physiotherapy Clinic</h6>
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
         <p>We are dedicated to providing the <b>best</b> care to our customers</p>
+        <p> We open 24/7, but only allow booking up to 2 weeks in advance</p>
 
       </div>
       <!-- Grid column -->
