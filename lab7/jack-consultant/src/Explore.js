@@ -69,7 +69,7 @@ const Explore = () => {
                marginTop: '70px',
           }}>
             <MDBCol md="6">
-              <MDBIcon icon="hand-holding-usd" size="5x" className="red-text" />
+              <MDBIcon icon="chess-knight" size="5x" className="red-text" />
               <h5 className="font-weight-bold my-4">Strategic Consulstant</h5>
               <p className="grey-text mb-md-0 mb-5">
                 <b>Total Hours: 7</b>
@@ -94,7 +94,7 @@ const Explore = () => {
                </Link>
             </MDBCol>
             <MDBCol md="6">
-            <MDBIcon icon="briefcase" size="5x" className="red-text" />
+            <MDBIcon icon="building" size="5x" className="red-text" />
             <h5 className="font-weight-bold my-4">Advanced Financial Help</h5>
               <p className="grey-text mb-md-0 mb-5">
                 <b>Total Hours: 20</b>
