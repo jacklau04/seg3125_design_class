@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar h1 {
+  color: #f1356d;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #f1356d;
+}
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.GetQuote {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.GetQuote label {
+  text-align: left;
+  display: block;
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.GetQuote input, .GetQuote textarea, .GetQuote select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+#unique-id{
+  background: lightcoral;
+}
+
+.Explore button:hover{
+  background: lightcoral;
+}
+.GetQuote button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.GetQuote button:hoever {
+  background:lightcoral;
+}
+
+.Event input, .Event textarea, .Event select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.Event button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.NotFound body {
+  background: linear-gradient(to right, white 50%, #383838 50%);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: white;
+}
+
+.NotFound div {
+  display: flex;
+  align-items: center;
+  height: 70vh;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.NotFound main {
+  text-align: center;
+}
+
+.NotFound h1{
+  font-size: 4rem;
+  color: blue;
+  margin-bottom: 1rem;
+}
+
+.NotFound p {
+  margin-bottom: 2.5rem;
+  font-style: italic;
+  color: blue;
+}
+
+.footer {
+  background: #f4f5f7;
+  padding: 1.5rem 0; }
+  .footer .col-footer .heading {
+    color: #8898aa;
+    letter-spacing: 0;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 1rem; }
+  .footer .nav .nav-item .nav-link,
+  .footer .footer-link {
+    color: #8898aa !important; }
+    .footer .nav .nav-item .nav-link:hover,
+    .footer .footer-link:hover {
+      color: #525f7f !important; }
+  .footer .list-unstyled li a {
+    display: inline-block;
+    padding: .125rem 0;
+    color: #8898aa;
+    font-size: 0.85rem; }
+    .footer .list-unstyled li a:hover {
+      color: #525f7f; }
+  .footer .copyright {
+    font-size: 0.875rem; }
+  .footer .dropdown .btn:not(:disabled):not(.disabled):active:focus,
+  .footer .dropdown .btn:not(:disabled):not(.disabled).active:focus {
+    box-shadow: none; }
+
+.footer-dark .col-footer .heading {
+  color: #fff; }
+
+.footer.has-cards {
+  overflow: hidden;
+  padding-top: 500px;
+  margin-top: -420px;
+  position: relative;
+  background: transparent;
+  pointer-events: none; }
+  .footer.has-cards:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 600px;
+    height: 2000px;
+    background: #f4f5f7;
+    transform: skew(0, -8deg); }
+  .footer.has-cards .container {
+    pointer-events: auto;
+    position: relative; }
+
+.NotFound button {
+  font-size: 1rem;
+  color: #383838;
+  border: none;
+  background-color: #f36a6f;
+  padding: 1rem 2.5rem;
+  margin-bottom: 20px;
+  transform: skew(-5deg);
+  transition: all 0.1s ease;
+  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/cursors-eye.png"),
+    auto;
+}
+
+.NotFound button:hover{
+    background-color: #c5dc50;
+    transform: scale(1.15);
+}
+
+.NotFound img{
+  background-image: none;
+  background-color: white;
+  max-width: 300px;
+}
